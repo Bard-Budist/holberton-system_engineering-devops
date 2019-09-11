@@ -1,2 +1,2 @@
 #!/bin/dash
-ls -B \n
+echo $(ls -B)\n
