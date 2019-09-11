@@ -1,2 +1,2 @@
 #!/bin/bash
-mkdir /etc/holberton
+mkdir /etc/holberton \n
