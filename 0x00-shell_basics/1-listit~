@@ -1,0 +1,2 @@
+#!/bin/dash
+wc -l ls
