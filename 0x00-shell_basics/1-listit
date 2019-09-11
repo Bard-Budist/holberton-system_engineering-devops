@@ -1,2 +1,2 @@
 #!/bin/dash
-ls \n
+ls -B
