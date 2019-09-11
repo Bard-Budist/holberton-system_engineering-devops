@@ -1,2 +1,2 @@
 #!/bin/bash
-rmdir --ignore-fail-on-non-empty tmp/holberton
+rm -rf tmp/holberton
