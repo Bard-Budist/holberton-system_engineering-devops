@@ -1,2 +1,2 @@
 #!/bin/bash
-chgrp -f betty:holberton ./* 
+chmod betty:holberton *
