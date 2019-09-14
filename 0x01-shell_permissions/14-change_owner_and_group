@@ -1,2 +1,2 @@
 #!/bin/bash
-chgrp -f betty:holberton ./* 
+chown betty:holberton *
