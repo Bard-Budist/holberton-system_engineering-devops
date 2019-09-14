@@ -1,2 +1,6 @@
 #!/bin/bash
-cp -u *.html
+<<<<<<< HEAD
+cp -u *.html ../
+=======
+cp -u *.html .
+>>>>>>> 3adb7040ca9ad4673a48abae7db4c0419f3e0f80
