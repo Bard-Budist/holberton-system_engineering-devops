@@ -1,8 +1,2 @@
 #!/bin/bash
-for i in {a..z}{a..z}
-do
-    if [$i=='oo']
-    then
-       echo $i
-    fi   
-done
+echo {a..z}{a..z} | tr -s ' ' '\n' | grep -v 'oo'
