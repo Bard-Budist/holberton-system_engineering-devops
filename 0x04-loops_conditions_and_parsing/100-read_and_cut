@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Advance #1
+file="/etc/passwd"
+while IFS=: read -r f1 f2; do
+printf '%s:%s\n' "$f1" "$( echo "$f2" | cut -d ":" -f 2,5 )"
+done <"$file"
