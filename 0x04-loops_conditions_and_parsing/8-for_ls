@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# ls command
-list=$( find . -type f| cut -d '-' -f 2 )
+# l command
+list=$( find . -type f -exec basename \;{} .po \; | cut -d '-' -f 2 )
 for i in $list; do
 echo "$i"
 done
