@@ -3,10 +3,9 @@
 msg="Holberton School"
 i=1
 while [ $i -le "10" ]; do
+echo "$msg"
 if [ $i -eq "9" ]; then
 echo "Hi"
-else
-echo "$msg"
 fi
 ((i++))
 done
