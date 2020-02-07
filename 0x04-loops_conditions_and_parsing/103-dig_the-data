@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+list=$(awk '{printf "%s %s\n",$1, $9}' ./apache-access.log | sort | uniq -c)
+echo "$list" | sort -k1 -nr
