@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Task 07
+cat 6-kill_me_now_made_easy > 67-kill_me_now_made_easy
+sh ./4-to_infinity_and_beyond
+trap "echo I am invincible!!!" SIGTERM
