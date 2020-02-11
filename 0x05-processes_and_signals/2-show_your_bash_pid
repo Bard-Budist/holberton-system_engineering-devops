@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Task 02
+# shellcheck disable=SC2009
+ps auxf | grep bash
