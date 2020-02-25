@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+"Program to show PID and listen port"
+netstat -lp
