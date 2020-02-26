@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-"Program to ping -c5 to ip for the argv"
+# Program to ping -c5 to ip for the argv
 if [ "$1" ]
 then
 	ping -c5 "$1"
