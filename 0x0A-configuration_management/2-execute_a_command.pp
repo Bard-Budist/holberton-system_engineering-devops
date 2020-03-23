@@ -1,6 +1,5 @@
 exec { 'killmenow':
 	command => 'pkill killmenow',
-	provider => shell,
-	path => '/usr/bin',
+	path => '/usr/bin/',
 }
 
