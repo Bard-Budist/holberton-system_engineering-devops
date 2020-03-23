@@ -1,3 +1,4 @@
+# Create file
 file { '/tmp/holberton':
   path    => '/tmp/holberton',
   owner   => www-data,
