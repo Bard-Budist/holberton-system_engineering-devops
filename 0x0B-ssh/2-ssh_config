@@ -1,0 +1,5 @@
+# Task 02
+# Task for ssh config file
+Host *
+	BatchMode yes
+	IdentityFile ~/.ssh/holberton
