@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Task 01
+# Install nginx web server
+sudo apt-get -y update
+sudo apt-get -y install nginx
+printf "server {\n\tlisten 80;\n\tlisten [::]:80;\n\tserver_name Holbi.com;\n\troot /var/www/html;\n\tindex index.html;\n\tlocation / {\n\t\t try_files \$uri \$uri/ =404;\n\t}\n}" | sudo tee -a /etc/nginx/sites-available/default > /dev/null
+sudo sed -i "/server_name Holbi.com;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
+sudo service nginx restart
