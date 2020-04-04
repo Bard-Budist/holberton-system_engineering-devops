@@ -4,5 +4,5 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 echo "Holberton School" | sudo tee -a /var/www/html/index.html > /dev/null
-printf "server {\n\tlisten 80;\n\tlisten [::]:80;\n\tserver_name Holbi.com;\n\troot /var/www/html;\n\tindex index.html;\n\tlocation / {\n\t\t try_files \$uri \$uri/ =404;\n\t\tadd_header X-Served-By 03-web-02;\n\t}\n}\n" | sudo tee -a /etc/nginx/sites-available/default > /dev/null
+printf "server {\n\tlisten 80;\n\tlisten [::]:80;\n\tserver_name Holbi.com;\n\troot /var/www/html;\n\tindex index.html;\n\tlocation / \n\t\t try_files \$uri \$uri/ =404;\n\t\tadd_header X-Served-By %s;\n\t}\n}\n" "$HOSTNAME" | sudo tee -a /etc/nginx/sites-available/default > /dev/null
 sudo service nginx start
