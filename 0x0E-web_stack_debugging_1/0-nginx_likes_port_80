@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Task 0
 sudo rm -rf /etc/nginx/sites-enabled/default
-printf "server {\n\tlisten 80 default_server;\n\tlisten [::]:80 default_server ipv6only=on;\n\tserver_name Holbi.com;\n\troot /var/www/html;\n\tindex index.html;\n\tlocation / {\n\t\t try_files \$uri \$uri/ =404;\n\t}\n}" | sudo tee -a /etc/nginx/sites-enabled/default > /dev/null
+printf "server {\n\tlisten 80 default_server;\n\tlisten [::]:80 default_server ipv6only=on;\n\tserver_name localhost;\n\troot /usr/share/nginx/html;\n\tindex index.html index.htm;\n\tlocation / {\n\t\t try_files \$uri \$uri/ =404;\n\t}\n}" | sudo tee -a /etc/nginx/sites-enabled/default > /dev/null
 sudo service nginx restart
