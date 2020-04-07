@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+print_text () {
+    comman=$(dig $2.$1 | grep -A1 'ANSWER SECTION:')
+    record=$(echo $comman | awk '{print $7}')
+    ip=$(echo $comman | awk '{print $8}')
+    printf "The subdomain %s is a %s record and points to %s\n" "$2" "$record" "$ip"
+}
+
+if [ $2 ]
+then
+    print_text $1 $2
+else
+    print_text $1 www
+    print_text $1 lb-01
+    print_text $1 web-01
+    print_text $1 web-02
+fi
