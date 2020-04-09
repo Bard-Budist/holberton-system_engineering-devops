@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# task 01
 print_text () {
     comman=$(dig $2.$1 | grep -A1 'ANSWER SECTION:')
     record=$(echo $comman | awk '{print $7}')
