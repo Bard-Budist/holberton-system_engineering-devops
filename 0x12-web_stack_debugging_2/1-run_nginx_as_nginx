@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Run command with other user
 sudo pkill apache2
-chmod 755 /etc/nginx/nginx.conf
+sudo chmod 755 /etc/nginx/nginx.conf
 sudo sed -i 's/#user www-data;/user nginx;/' /etc/nginx/nginx.conf
 sudo sed -i 's/listen 80 default_server;/listen 8080 default_server;/g' /etc/nginx/sites-enabled/default
+sudo sed -i 's/listen [::]:80 default_server ipv6only=on;/listen [::]:8080 default_server ipv6only=on;/g' /etc/nginx/sites-enabled/default
 sudo -u nginx service nginx restart
