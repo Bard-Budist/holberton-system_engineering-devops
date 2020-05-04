@@ -21,4 +21,4 @@ if __name__ == "__main__":
             t_ok += 1
             list_tittle.append(item['title'])
     print("Employee {} is done with tasks({}/{}):".format(name, t_ok, t_task))
-    [print("     " + task) for task in list_tittle]
+    [print("\t " + task) for task in list_tittle]
