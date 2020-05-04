@@ -11,7 +11,7 @@ if __name__ == "__main__":
     user_dit = {'userId': sys.argv[1]}
     name = requests.get(
         "https://jsonplaceholder.typicode.com/users",
-        params={'id': 2}).json()[0]['username']
+        params={'id': sys.argv[1]}).json()[0]['username']
     data = requests.get(
         "https://jsonplaceholder.typicode.com/todos",
         params=user_dit).json()

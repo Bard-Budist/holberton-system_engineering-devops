@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ Gather data from an API
 """
-import sys
 import requests
+import sys
 
 
 if __name__ == "__main__":
@@ -12,7 +12,7 @@ if __name__ == "__main__":
         params=user_dit)
     name = requests.get(
         "https://jsonplaceholder.typicode.com/users",
-        params={'id': 2}).json()[0]['name']
+        params={'id': sys.argv[1]}).json()[0]['name']
     t_task = len(data.json())
     list_tittle = []
     t_ok = 0
