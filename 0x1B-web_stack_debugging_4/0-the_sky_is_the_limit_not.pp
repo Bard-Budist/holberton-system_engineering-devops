@@ -4,10 +4,10 @@ file { '/etc/default/nginx':
     replace => 'yes',
     content => 'ULIMIT="-n 4096"',
     mode    => '0644',
-    before => Exec['restart'],
+    before  => Exec['restart'],
   }
 
 exec { 'restart':
-     provider => 'shell',
-     command  => "sudo service nginx restart",
+    provider => 'shell',
+    command  => 'sudo service nginx restart',
 }
